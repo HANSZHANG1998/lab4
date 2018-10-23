@@ -3,7 +3,6 @@
 
 int main(int argc, char *argv[])
 {
-  int i;
   wiringPiSetup () ;
   pinMode(0, INPUT);
   pinMode(1,OUTPUT);
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
     if(digitalRead(0) == 0){
     printf("Got a 0\n");
     digitalWrite(2,LOW);
-    digitalWrite(1,HIGH);delay(200);
+    digitalWrite(1,HIGH);delay(100);
     digitalWrite(1,LOW);}
     printf("Alarm\n");
   }
