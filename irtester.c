@@ -10,11 +10,11 @@ int main(int argc, char *argv[])
   pinMode(2,OUTPUT);
   while(1) {
     printf("waitting for reset\n");
-    while (digitalRead(0)==1){
+    if(digitalRead(0)==1){
     printf("Got a 1\n");
     digitalWrite(2,HIGH);
     digitalWrite(1,LOW);
-    ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/123", "george1", "EECS32222", "Hii George1 1234656");
+    ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/214773840", "Hans", "EECS2031", "NEW MESSAGE");
 }
    printf("waitting for event\n");
     if(digitalRead(0) == 0){
@@ -24,6 +24,5 @@ int main(int argc, char *argv[])
     digitalWrite(1,LOW);}
     printf("Alarm\n");
   }
-  /*NOTREACHED*/
   return 0 ;
 }
